@@ -5,6 +5,19 @@
 <div class="oj-hybrid-padding">
   <h1>Dashboard Content Area</h1>
   <div>
-      To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
+    <oj-form-layout id="form-container">
+      <!-- <oj-input-text id="input" required value="text" label-hint="Name"></oj-input-text> -->
+      <oj-label id="inputgroup" label-id="inputgrouplabel">Name *</oj-label>
+      <div class="oj-form-control-group" aria-labelledby="inputgrouplabel" role="group">
+        <oj-input-text aria-label="this is the input1 label text" placeholder="First Name"></oj-input-text>
+        <oj-input-text aria-label="this is the input2 label text" placeholder="Last Name"></oj-input-text>
+      </div>
+      <oj-input-text id="input2" style="max-width:38.7%" type="text" label-hint="Username"></oj-input-text>
+      <oj-input-text id="input2" style="max-width:38.7%" type="email" label-hint="Email"></oj-input-text>
+      <oj-input-text id="input2" style="max-width:38.7%" type="text" label-hint="Phone"></oj-input-text>
+      <oj-input-text id="input2" style="max-width:38.7%" type="text" label-hint="Stack" placeholder="E.g. MongoDB, ExpressJS, ReactJS and NodeJS"></oj-input-text>
+
+      <oj-button id='button1' on-oj-action='[[buttonClick]]'>Sign-up</oj-button>
+    </oj-form-layout>
   </div>
 </div>
