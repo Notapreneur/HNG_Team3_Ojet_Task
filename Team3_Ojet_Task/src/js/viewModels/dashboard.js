@@ -31,6 +31,8 @@ define(['ojs/ojcore',
       self.buttonClick = function(event){
                             self.clickedButton(event.currentTarget.id);
                             return true;
+                           
+                           //autogenerate ID
                             let ID;
                             const prefix = "HNG";
                             let zeros;
@@ -52,7 +54,6 @@ define(['ojs/ojcore',
                                 number +=1;
                                 ID = prefix + zeros + number.toString();
                             }else{
-                                if (number.length > 4){
                                 number +=1;
                                 ID = prefix + number.toString();
                             }
