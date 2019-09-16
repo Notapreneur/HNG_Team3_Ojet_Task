@@ -32,6 +32,7 @@ define(['ojs/ojcore',
                             self.clickedButton(event.currentTarget.id);
                             return true;
                           }.bind(self);
+      self.value = ko.observable("What");
 
       /**
        * Optional ViewModel method invoked after the View is inserted into the
