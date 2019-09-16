@@ -33,31 +33,27 @@ define(['ojs/ojcore',
                             return true;
                            
                            //autogenerate ID
-                            let ID;
+                             let ID;
                             const prefix = "HNG";
                             let zeros;
-                            let number = 0;
-                            if (number.length = 1){
+                            let number = 0; 
+                            number +=1;
+                            const num = number.toString();
+                            if (num.length == 1){
                                 zeros = "0000";
-                                number +=1;
-                                ID = prefix + zeros + number.toString();
-                            }else if (number.length = 2){
+                                ID = prefix + zeros + num;
+                            }else if (num.length == 2){
                                 zeros = "000";
-                                number +=1;
-                                ID = prefix + zeros + number.toString();
-                            }else if (number.length = 3){
+                                ID = prefix + zeros + num;
+                            }else if (num.length == 3){
                                 zeros = "00";
-                                number +=1;
-                                ID = prefix + zeros + number.toString();
-                            }else if (number.length = 4){
+                                ID = prefix + zeros + num;
+                            }else if (num.length == 4){
                                 zeros = "0";
-                                number +=1;
-                                ID = prefix + zeros + number.toString();
+                                ID = prefix + zeros + num;
                             }else{
-                                number +=1;
-                                ID = prefix + number.toString();
+                                ID = prefix + num;
                             }
-                            
                             
                             }
                           }.bind(self);
