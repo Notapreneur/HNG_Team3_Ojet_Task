@@ -29,15 +29,17 @@ define(['ojs/ojcore',
                                   }, self);
       self.clickedButton = ko.observable("(None clicked yet)");
       self.buttonClick = function(event){
-                            self.clickedButton(event.currentTarget.id);
-                            return true;
-                           
-                           //autogenerate ID
-                             let ID;
+          //autogenerate ID
+                            const saveNumber = [];
+                            let ID;
                             const prefix = "HNG";
                             let zeros;
-                            let number = 0; 
+                            let number = Number(saveNumber); 
                             number +=1;
+                            //remove previous data
+                            saveNumber.shift(saveNumber[0]);
+                            //update the array
+                            saveNumber.push(number);
                             const num = number.toString();
                             if (num.length == 1){
                                 zeros = "0000";
@@ -54,8 +56,12 @@ define(['ojs/ojcore',
                             }else{
                                 ID = prefix + num;
                             }
+                            console.log(ID);
+                            self.clickedButton(event.currentTarget.id);
+                            return true;
+                           
+                           
                             
-                            }
                           }.bind(self);
       self.value = ko.observable("What");
 
