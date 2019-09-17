@@ -31,6 +31,31 @@ define(['ojs/ojcore',
       self.buttonClick = function(event){
                             self.clickedButton(event.currentTarget.id);
                             return true;
+                           
+                           //autogenerate ID
+                             let ID;
+                            const prefix = "HNG";
+                            let zeros;
+                            let number = 0; 
+                            number +=1;
+                            const num = number.toString();
+                            if (num.length == 1){
+                                zeros = "0000";
+                                ID = prefix + zeros + num;
+                            }else if (num.length == 2){
+                                zeros = "000";
+                                ID = prefix + zeros + num;
+                            }else if (num.length == 3){
+                                zeros = "00";
+                                ID = prefix + zeros + num;
+                            }else if (num.length == 4){
+                                zeros = "0";
+                                ID = prefix + zeros + num;
+                            }else{
+                                ID = prefix + num;
+                            }
+                            
+                            }
                           }.bind(self);
       self.value = ko.observable("What");
 
