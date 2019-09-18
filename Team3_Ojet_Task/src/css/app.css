@@ -10,8 +10,85 @@
   width: 50%;
   margin: 0 auto;
   padding: 10px;
+  
+  
 }
 
 #input2 {
   width: 100% !important;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius:3rem;
+  
+
+  
+}
+
+#inputgroup {
+  width: 100% !important;
+  box-sizing: border-box;
+  border-radius:3rem;
+
+  
+}
+
+
+#globalBody{
+    
+ background: #fff;
+ color: #fff;
+}
+
+#button1{
+    width: 30rem;
+    margin-top: 1rem;
+    height: 3rem;
+    font-size: large;
+    width:100% !important;
+    background-color: #4285F4;
+}
+#wrapper {
+    text-align: center;
+}
+
+#reg_header{
+    font-size: 2rem;
+    text-align: center;
+    color: #4285F4;
+    font-weight: bold;
+    margin-top: 2rem;
+    
+}
+#navDrawer{
+    color: #fff;
+}
+#app_name{
+    color:#4285F4;
+}
+
+#banner{
+    background:#4285F4;
+    color: #fff;
+}
+#dropdown_button {
+     color:#fff;
+     font-weight: bolder;
+     }
+     #dropdown_button2{
+         background-color: #fff;
+     }
+     
+#icon{
+  color: #fff;
+font-weight:bolder;
+font-size: 3rem;
+font-family:cursive;
+}
+
+
+@media screen and (max-width: 600px) {
+   #form-container {
+    width: 100%;
+    margin-top: 0;
+  }
 }
